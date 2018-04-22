@@ -1,8 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+)
+
+func HomeEndPoint(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "Hello World!! My first Golang")
+}
 
 func main() {
-	fmt.Println("hello GO!!!")
 
+	http.HandleFunc("/", HomeEndPoint)
+	if err := http.ListenAndServe(":80", nil); err != nil {
+		log.Fatal(err)
+	}
 }
