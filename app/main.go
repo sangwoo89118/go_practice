@@ -9,7 +9,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 )
 
-// initialize data
+// initialize	 data
 type person struct {
 	ID      string   `json:"id"`
 	Name    string   `json:"name"`
@@ -31,7 +31,7 @@ func homePage(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 		<div style="margin:auto">
 			<h1 style="text-align:center; font-size:4em"> Welcome to SQL ANGELES </h1>
 			<h1 style="text-align:center; font-size:2em"> This project is a simple RESTful API using Golang with Docker </h1>
-			<div style="display:grid;height:100%">
+			<div style="display:grid">
 			<ul style="margin: auto;list-style:none; font-size: 1.7em">
 				<li>localhost:8000 - GET - Home Page</li>
 				<li>localhost:8000/people - GET - getPeople</li>
